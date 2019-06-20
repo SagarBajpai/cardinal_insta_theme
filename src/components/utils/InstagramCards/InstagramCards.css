@@ -1,0 +1,53 @@
+.row {
+    margin-right: unset;
+}
+._column {
+    width: auto;
+}
+.feed_block {
+    position: relative;
+    width: fit-content;
+}
+.feed_block img{
+    width: 199px;
+    border: 10px solid white;
+    box-shadow: 1px 1px 1px 1px #f3f0f0;
+}
+.insta_icon img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 54px;
+    border: 0;
+}
+
+.caption_block {
+    position: relative;
+    width: 205px;
+    margin-top: 11px;
+    height: 187px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px #f3f0f0;
+}
+.caption_block>div{
+    margin:10px;
+}
+.caption_block h3 {
+    font-size: 22px;
+    text-transform: lowercase;
+}
+.caption_block p{
+    font-size: 12.5px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #7d7b7b;
+}
+.likes_comments{
+    float: right;
+}
+.likes_comments span{
+    margin: 0 6px;
+}
+._comments{
+    font-size: 18px;
+}

@@ -1,0 +1,51 @@
+.outer_box {
+    margin: 10px;
+}
+
+.content_box {
+    padding: 20px;
+    border: 1px solid #ece8e8;
+}
+
+._catagory {
+    color: #7d7b7b;
+    font-size: 14.5px;
+}
+
+._dishname {
+    color: #353434;
+    font-size: 18px;
+}
+._dishname h5{
+    font-size: 20px;
+}
+
+._descption {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+._servings {
+    position: absolute;
+    color: white;
+    width: max-content;
+    text-align: center;
+    top: 0;
+    background-color: rgba(66, 66, 66, 0.5);
+}
+._servings h1{
+    
+}
+._servings h3{
+    line-height: 0
+}
+
+._servings div{
+    margin: 0px 15px 20px;
+}
+
+._arrow{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

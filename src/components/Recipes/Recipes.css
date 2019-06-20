@@ -1,0 +1,47 @@
+.section_heading {
+    margin: 30px;
+}
+
+.section_left_heading{
+
+}
+
+.section_right_heading{
+    margin-top: 45px;
+}
+.carousel-control.right {
+    color: black;
+}
+
+.carousel-control{
+    top:unset;
+    background-image: unset !important;
+}
+
+.prev_arrow {
+    right: 53px !important;
+}
+
+.cards_container {
+    display: inline-block;
+    vertical-align: top;
+}
+
+._recipes {
+    position: relative;
+    z-index: 1;
+    font-size: 56px;
+    line-height: 0.8;
+}
+._recipes:before{
+    border-top: 8px solid #FFDAC8  ;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 30px;
+    left: -16px;
+    right: 0px;
+    bottom: 0;
+    width: 120%;
+    z-index: -1;
+}

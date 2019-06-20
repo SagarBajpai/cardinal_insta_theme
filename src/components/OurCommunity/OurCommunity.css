@@ -1,0 +1,81 @@
+#_heading {
+    margin: 20px 0;
+}
+
+#_heading h1{
+    font-size: 56px;
+    color:  #353434;
+    line-height: 0.9;
+}
+
+#_heading p {
+    margin-top: 25px;
+    width: 170px;
+    font-size: 19px;
+    letter-spacing: 0.2px;
+}
+
+._pos {
+    float: right; 
+}
+._community {
+    position: relative;
+    z-index: 1;
+}
+._community:before{
+    border-top: 5px solid #FFDAC8;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 30px;
+    left: -16px;
+    right: 0px;
+    bottom: 0;
+    width: 112%;
+    z-index: -1;
+}
+
+.instagram_col {
+    height: 370px;
+    position: relative;
+}
+.instagram_col>div {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+.bg_detail_1{
+    position: absolute;
+    left: 150px;
+    bottom: -21px;
+    z-index: -1;
+}
+
+.bg_detail_2{
+    position: absolute;
+    bottom: -23px;
+    right: 0;
+    z-index: -1;
+}
+.bg_detail_3 { 
+    position: absolute;
+    left: 32px;
+    bottom: -35px;
+    z-index: -1;
+}
+
+.free_text {
+    margin: 20px 0;
+    padding: 20px 0;
+    font-size: 12.5px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #7d7b7b;
+    width: 176px;
+}
+
+@media only screen and (max-width: 768px){
+    .bg_detail_2{
+        display: none;
+    }
+}
