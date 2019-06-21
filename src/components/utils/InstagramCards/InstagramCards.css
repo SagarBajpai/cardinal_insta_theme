@@ -43,7 +43,10 @@
     color: #7d7b7b;
 }
 .likes_comments{
-    float: right;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    margin: 10px
 }
 .likes_comments span{
     margin: 0 6px;

@@ -36,7 +36,9 @@ class OurCommunity extends Component {
               <div style={{ position: "relative", width: "max-content" }}>
                 <div data-aos="fade-up">
                   <div>
-                    <InstagramCards />
+                    <InstagramCards 
+                    username={'buzzfeedfood'}
+                    />
                   </div>
                 </div>
                 <img src="/images/bg-detail.png" className="bg_detail_1" />
@@ -58,7 +60,9 @@ class OurCommunity extends Component {
             >
               <div data-aos="fade-up">
                 <div>
-                  <InstagramCards inverse={1} />
+                  <InstagramCards inverse={1} 
+                  username={'love_food'}
+                  />
                 </div>
               </div>
               <img src="/images/detail03.png" className="bg_detail_3" />
@@ -89,7 +93,9 @@ class OurCommunity extends Component {
             <div style={{ position: "relative", width: "max-content" }}>
               <div data-aos="fade-up">
                 <div>
-                  <InstagramCards inverse={1} />
+                  <InstagramCards inverse={1} 
+                  username={'tastyvegetarian'}
+                  />
                 </div>
               </div>
               <img src="/images/bg-detail.png" className="bg_detail_1" />

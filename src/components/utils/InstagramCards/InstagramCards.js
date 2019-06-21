@@ -5,37 +5,46 @@ class InstagramCards extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      username: props.username,
       data: null,
-      comments: null,
-      loaded: true,
-      likes: "14.7k",
-      comments: "40",
-      access_token: "11045436543.01b9ce7.f9d759dc336a48a192c4c8c8a931d99c"
+      image: props.image,
+      likes: props.likes,
+      comments: props.comments,
+      caption: props.comments,
     };
   }
   componentDidMount = () => {
-    // this.fetchFeed();
+    this.fetchFeed();
   };
   async fetchFeed() {
     let response = await fetch(
-      "https://api.instagram.com/v1/users/self" +
-        "/media/recent/?access_token=" +
-        this.state.access_token
+      `https://www.instagram.com/${this.state.username}/?__a=1`
     );
     let posts = await response.json();
-    console.log("res : ", response);
-    // let comments = await this.makeCommentsList(posts.data)
+    console.log('post: ', posts)
     this.setState({
-      data: posts.data,
-      // comments: comments,
+      data: posts,
       loaded: true
+    },()=>{
+        this.setState({
+            image: this.state.data.graphql.user.edge_owner_to_timeline_media.edges[0].node.display_url,
+            comments: this.state.data.graphql.user.edge_owner_to_timeline_media.edges[0].node.edge_media_to_comment.count,
+            likes: this.state.data.graphql.user.edge_owner_to_timeline_media.edges[0].node.edge_liked_by.count,
+            caption: this.state.data.graphql.user.edge_owner_to_timeline_media.edges[0].node.edge_media_to_caption.edges[0].node.text
+        })
     });
   }
   render() {
-    const { data, likes, comments } = this.state;
-    const { inverse, username, caption } = this.props;
+    const { likes, comments, image, data, caption } = this.state;
+    const { inverse, username } = this.props;
+    let _caption;
+    if(caption.length> 152){
+        _caption = caption.toString().substring(0,151);
+    }else{
+        _caption=caption
+    }
 
-    console.log("Data : ", data);
+    console.log("caption : ", caption);
     return (
       <div>
         {inverse ? (
@@ -45,11 +54,7 @@ class InstagramCards extends Component {
                 <div>
                   <h3>{username}</h3>
                   <p>
-                    It’s taco Tuesday! These tacos from @jesseszewczyk have no
-                    added sugars and are SO good
-                    <br />
-                    .Find the recipe from the link in our bio! :
-                    @taylormillerphoto
+                    {_caption}
                   </p>
                   <div className="likes_comments">
                     <span>
@@ -63,7 +68,7 @@ class InstagramCards extends Component {
             </div>
             <div className="col-sm-6 _column">
               <div className="feed_block">
-                <img src="/images/menu_1.jpg" />
+                <img src={image} />
                 <div className="insta_icon">
                   <img src="/images/instagram-btn.png" />
                 </div>
@@ -74,7 +79,7 @@ class InstagramCards extends Component {
           <div className="row">
             <div className="col-sm-6 _column">
               <div className="feed_block">
-                <img src="/images/menu_1.jpg" />
+                <img src={image } />
                 <div className="insta_icon">
                   <img src="/images/instagram-btn.png" />
                 </div>
@@ -83,13 +88,9 @@ class InstagramCards extends Component {
             <div className="col-sm-6 _column">
               <div className="caption_block">
                 <div>
-                  <h3>{username}</h3>
+                  <h3>@{username}</h3>
                   <p>
-                    It’s taco Tuesday! These tacos from @jesseszewczyk have no
-                    added sugars and are SO good
-                    <br />
-                    .Find the recipe from the link in our bio! :
-                    @taylormillerphoto
+                  {_caption}
                   </p>
                   <div className="likes_comments">
                     <span>
@@ -109,6 +110,10 @@ class InstagramCards extends Component {
 }
 InstagramCards.defaultProps = {
   inverse: 0,
-  username: "@buzzfeedfood"
+  username: "buzzfeedfood",
+  image:'/images/menu_1.jpg',
+  caption: 'It’s taco Tuesday! These tacos from @jesseszewczyk have no added sugars and are SO good <br />. Find the recipe from the link in our bio! : @taylormillerphoto',
+  likes:'14.k',
+  comments:'49'
 };
 export default InstagramCards;
