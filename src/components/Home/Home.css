@@ -39,3 +39,7 @@
 ._dash{
     font-size: 15px;
 }
+
+#section4 {
+    overflow: hidden;
+}
