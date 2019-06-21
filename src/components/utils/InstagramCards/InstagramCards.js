@@ -52,7 +52,7 @@ class InstagramCards extends Component {
             <div className="col-sm-6 _column">
               <div className="caption_block">
                 <div>
-                  <h3>{username}</h3>
+                  <h3>@{username}</h3>
                   <p>
                     {_caption}
                   </p>
