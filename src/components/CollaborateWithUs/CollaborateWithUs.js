@@ -14,7 +14,7 @@ const CollaborateWithUs=(props)=> {
                             <div>
                                 <div className="left_side_title">
                                     <h1>COLLABORATE <br/>
-                                    <span class='_withus'>WITH US</span>
+                                    <span className='_withus'>WITH US</span>
                                     </h1>
                                 </div>
                             </div>
@@ -40,27 +40,27 @@ const CollaborateWithUs=(props)=> {
                     <div className="col-md-6">
                         <div style={{padding:20, marginTop:40}}>
                         <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
+                            <div className="form-row">
+                                <div className="form-group col-md-6">
                                     <label className="custom_form_label">Email</label>
-                                    <input type="text" class="form-control custom_input" id="name" placeholder="Name"/>
+                                    <input type="text" className="form-control custom_input" id="name" placeholder="Name"/>
                                     </div>
-                                <div class="form-group col-md-6">
+                                <div className="form-group col-md-6">
                                     <label className="custom_form_label">Surname</label>
-                                    <input type="text" class="form-control custom_input" id="surname" placeholder="Surname" />
+                                    <input type="text" className="form-control custom_input" id="surname" placeholder="Surname" />
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div className="form-group col-md-6">
                                     <label className="custom_form_label">Phone</label>
-                                    <input type="text" class="form-control custom_input" id="phone" placeholder="Phone" />
+                                    <input type="text" className="form-control custom_input" id="phone" placeholder="Phone" />
                                     </div>
-                                <div class="form-group col-md-6">
+                                <div className="form-group col-md-6">
                                     <label className="custom_form_label">Email</label>
-                                    <input type="email" class="form-control custom_input" id="email" placeholder="Email" />
+                                    <input type="email" className="form-control custom_input" id="email" placeholder="Email" />
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <div class="col-auto my-1">
-                                        <label class="mr-sm-2 custom_form_label" for="inlineFormCustomSelect" style={{marginBottom:14}}>Preference</label><br/>
-                                        <select class="custom-select mr-sm-2 custom_input" id="inlineFormCustomSelect" style={{width:'100%'}}>
+                                <div className="form-group col-md-6">
+                                    <div className="col-auto my-1">
+                                        <label className="mr-sm-2 custom_form_label" for="inlineFormCustomSelect" style={{marginBottom:14}}>Preference</label><br/>
+                                        <select className="custom-select mr-sm-2 custom_input" id="inlineFormCustomSelect" style={{width:'100%'}}>
                                             <option selected className='_selected'>Select</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
@@ -68,10 +68,10 @@ const CollaborateWithUs=(props)=> {
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <div class="col-auto my-1">
-                                        <label class="mr-sm-2 custom_form_label" for="inlineFormCustomSelect" style={{marginBottom:14}}>Preference</label><br/>
-                                        <select class="custom-select mr-sm-2 custom_input" id="inlineFormCustomSelect" style={{width:'100%'}}>
+                                <div className="form-group col-md-6">
+                                    <div className="col-auto my-1">
+                                        <label className="mr-sm-2 custom_form_label" for="inlineFormCustomSelect" style={{marginBottom:14}}>Preference</label><br/>
+                                        <select className="custom-select mr-sm-2 custom_input" id="inlineFormCustomSelect" style={{width:'100%'}}>
                                             <option selected className='_selected'>Select</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>

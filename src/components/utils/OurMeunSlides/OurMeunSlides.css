@@ -1,0 +1,23 @@
+.our_menu_slides_text{
+    padding: 10px;
+    width: 180px;
+}
+
+.our_menu_slides_text p{
+    font-size: 13px;
+    font-family: sans-serif;
+    color: #7d7b7b;
+}
+
+.our_menu_slides_price {
+    width: fit-content;
+    padding: 1px 14px;
+    border: 2px solid #FFDAC8;
+}
+.our_menu_slides_price p{
+    font-size: 12px;
+    font-family: unset;
+    color:unset;
+    line-height: 0;
+    display: inline-block;
+}

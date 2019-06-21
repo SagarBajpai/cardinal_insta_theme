@@ -1,0 +1,41 @@
+._request_info {
+    right: 0;
+    top: 50%;
+    width: max-content;
+    position: fixed;
+    transform: rotate(-90deg);
+    background: white;
+    padding: 6px;
+    z-index: 4;
+}
+._request_info h4 {
+    line-height: 0;
+    display: block;
+}
+.section_counter {
+    position: fixed;
+    left: 0;
+    top: 40%;
+    z-index: 4;
+    padding: 0px 10px;
+    margin: 0px 10px;
+}
+.section_counter_li {
+    list-style: none;
+    text-decoration: line-through;
+}
+
+.section_counter_a{
+    color: black;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.is_active{
+    font-size: 14.5px !important;
+    opacity: 1; 
+}
+
+._dash{
+    font-size: 15px;
+}
