@@ -1,4 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Demo
+https://cardinal-insta-theme.herokuapp.com/
 
 ## Project Layout images
 ![](images/Screenshot_29.png)
